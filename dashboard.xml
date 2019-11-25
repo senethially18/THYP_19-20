@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+ <head>
+  <title>big data</title>
+  <type>Private</type>
+  <creationDate>2019-11-18 05:18:28</creationDate>
+ </head>
+ <body>
+  <outline title="Actualités" cols="3" layout="3-0">
+   <outline title="Le Monde.fr : A la une" xmlUrl="http://www.lemonde.fr/rss/une.xml" htmlUrl="https://www.lemonde.fr/rss/une.xml" type="rss" row="1000" col="1"/>
+   <outline title="L'actu  sur Le HuffPost" xmlUrl="http://www.huffingtonpost.fr/rss/index.xml" htmlUrl="http://www.aol.com/" type="rss" row="2000" col="1"/>
+   <outline title="FrenchWeb.fr » Flux" xmlUrl="http://frenchweb.fr/feed" htmlUrl="https://www.frenchweb.fr/" type="rss" row="1000" col="2"/>
+   <outline title="GNT - actualités" xmlUrl="http://www.generation-nt.com/export/rss.xml" htmlUrl="https://www.generation-nt.com/" type="rss" row="2000" col="2"/>
+   <outline title="A la une sur Libération" xmlUrl="http://rss.liberation.fr/rss/latest/" htmlUrl="https://www.liberation.fr/" type="rss" row="1000" col="3"/>
+   <outline title="Presse-Citron" xmlUrl="http://www.presse-citron.net/feed/" htmlUrl="https://www.presse-citron.net/" type="rss" row="2000" col="3"/>
+  </outline>
+  <outline title="Général" icon="http://cdn.netvibes.com/img/icons/color_swatch.gif" cols="3" layout="3-0">
+   <outline title="Le blog de Netvibes Business" xmlUrl="http://blog.netvibesbusiness.com/fr/feed/" htmlUrl="http://blog.netvibesbusiness.com/fr" type="rss" row="1000" col="1"/>
+   <outline title="L'Important : L'info par les réseaux sociaux" xmlUrl="http://limportant.fr/rss" htmlUrl="https://www.limportant.fr/" type="rss" row="2000" col="1"/>
+   <outline title="Zdnet" xmlUrl="http://www.zdnet.fr/feeds/rss/actualites/" htmlUrl="https://www.zdnet.fr/feeds/rss/actualites/" type="rss" row="3000" col="1"/>
+   <outline type="Weather" title="Paris, France" row="4000" col="1">
+    <outline unit="1" showLocalTime="1" view="full" view_full_collapsed="false" town="48.858852/2.347005" color="blue" townName="" townCodeStore=""/>
+   </outline>
+   <outline type="LinkModule" title="Widget Lien" row="5000" col="1">
+    <outline showThumbnail="1" color="blue" showUrl="1"/>
+   </outline>
+   <outline type="TodoList" title="To Do List" row="6000" col="1">
+    <outline width="" height="" flashvars="" title="To Do List" color="blue"/>
+   </outline>
+   <outline title="Les echos" xmlUrl="http://syndication.lesechos.fr/rss/rss_une.xml" htmlUrl="https://www.lesechos.fr/" type="rss" row="1000" col="2"/>
+   <outline title="Nouvel Obs" xmlUrl="http://tempsreel.nouvelobs.com/rss.xml" htmlUrl="http://www.nouvelobs.com/" type="rss" row="2000" col="2"/>
+   <outline type="MailWizard" title="E-mail Wizard" row="3000" col="2">
+    <outline color="orange"/>
+   </outline>
+   <outline title="Blog de Netvibes" xmlUrl="http://feeds.feedburner.com/NetvibesDevBlogFR" htmlUrl="http://blog.netvibes.com/fr" type="rss" row="4000" col="2"/>
+   <outline title="Le journal - Europe 1" xmlUrl="http://cdn-new-europe1.ladmedia.fr/var/exports/podcasts/sound/actu.xml" htmlUrl="https://www.europe1.fr/emissions/Les-journaux-de-la-redaction" type="rss" row="5000" col="2"/>
+   <outline title="CNET France" xmlUrl="http://www.cnetfrance.fr/feeds/rss/produits/" htmlUrl="https://www.cnetfrance.fr/" type="rss" row="1000" col="3"/>
+   <outline title="Courrier international - Actualités France et Monde, vidéos, infographies" xmlUrl="http://www.courrierinternational.com/feed/all/rss.xml" htmlUrl="https://www.courrierinternational.com/" type="rss" row="2000" col="3"/>
+   <outline type="Twitter" title="Twitter" row="3000" col="3">
+    <outline width="" height="" flashvars="" limit="5" pagerPosition="bottom" useFullName="" showClient="" disableCheckMessages="" activeTab="home" selectedList="none" lightVersion="false"/>
+   </outline>
+   <outline type="Facebook" row="4000" col="3"/>
+  </outline>
+ </body>
+</opml>
