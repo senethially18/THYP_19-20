@@ -1,3 +1,4 @@
+
 /* GENERAL */
 body{
     font-family: 'Lato', sans-serif;
@@ -25,7 +26,7 @@ section .heading h2{
 .red-divider{
     width: 100px;
     height: 2px;
-    background: #808000;
+    background: #007780;
     margin: 0 auto 20px;
 
 }
@@ -39,7 +40,7 @@ section .heading h2{
 
 /* MENU */
 .navbar {
-    background-color: #003366;
+    background-color: #2c57a7;
     font-size: 12px;
     border-bottom: 1px solid #fff;
     letter-spacing: 4px;
@@ -102,7 +103,7 @@ section .heading h2{
 }
 
 #skills .heading h2 {
-    color: #808000 !important;
+    color: #007780 !important;
 }
 #skills .progress{
     height: auto;
@@ -110,7 +111,7 @@ section .heading h2{
     background: #ddd;
 }
 #skills .progress-bar{
-    background: #01796F !important;
+    background: rgb(44, 92, 107) !important;
 }
 #skills .progress h5{
     margin-top: 5px;
@@ -120,7 +121,7 @@ section .heading h2{
 
 /* EXPERIENCE */
 #experience{
-    background: #2C2C6B !important;
+    background: rgb(44, 92, 107) !important;
 }
 #experience .heading h2{
     color: #fff !important;
@@ -217,7 +218,7 @@ section .heading h2{
     background: #fff;
 }
 #education .heading h2{
-    color: #808000;
+    color: #007780;
 }
 .education-block{
     width:90%;
@@ -252,38 +253,18 @@ section .heading h2{
 }
 
 
-/* PORTFOLIO */
-#portfolio{
-    background:  #2C2C6B;
-}
-#portfolio .heading h2{
-    color: #fff;
-}
-#portfolio img{
-    width: 100%;
-    height: 100%;
-    filter: grayscale(100%);
-    -webkit-filter: grayscale(100%); 
-}
-#portfolio img:hover{
-     filter: none;
-    -webkit-filter: none; 
-}
-#portfolio .col-md-6{
-    margin-bottom: 20px;
-}
 
 
-/* RECOMMANDATIONS */
-#recommandations{
+/* INFORMATIONS */
+#informations{
     background: #fff;
 }
-#recommandations .heading h2{
-    color: #808000;
+#informations .heading h2{
+    color: #007780;
 }
 .fas.fa-chevron-left, .fas.fa-chevron-right{
     background-image: none;
-    color: #d82c2e;
+    color: #d6aeaf;
 }
 .carousel-indicators{
     bottom: 0px;

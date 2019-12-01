@@ -12,4 +12,4 @@ J'utilise diigo poour enregistrer des pages web (liens, segments de pages) sur l
 Netvibes me permet de construire mon dashboard personnel afin de pouvoir suivre l'actulité sur les nouvelles Technologies. 
 
 ## Google Scholar
-Google Scolar me permet de faire de la veille sur les articles scientifiques dans mes domaines de prédilection.
+Google Scholar me permet de faire de la veille sur les articles scientifiques dans mes domaines de prédilection.

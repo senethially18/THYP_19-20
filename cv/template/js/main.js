@@ -27,8 +27,7 @@ var vals = {"Pas besoin":1, "Besoin d'approfondissement":5, "Besoin urgent":10, 
          database = firebase.database();
          refDatabase = database.ref("etudiants");
          refDatabase.on("value",getEtudiants, errData);
-        // statGlobalDatabase = database.ref("statglobal");
-        // statGlobalDatabase.on("value",getstatGlobal,errData);
+        
      }
      function getEtudiants(data){
          etudiantsList = data.val();
@@ -160,7 +159,6 @@ var vals = {"Pas besoin":1, "Besoin d'approfondissement":5, "Besoin urgent":10, 
          function chart(selection){
              selection.each(function(data) {
                  // generate chart
-                 // ===========================================================================================
                  // Set up constructors for making donut. See https://github.com/d3/d3-shape/blob/master/README.md
                  var radius = Math.min(width, height) / 2;
                  // creates a new pie generator
@@ -178,8 +176,7 @@ var vals = {"Pas besoin":1, "Besoin d'approfondissement":5, "Besoin urgent":10, 
                  var outerArc = d3.arc()
                      .outerRadius(radius * 0.9)
                      .innerRadius(radius * 0.9);
-                 // ===========================================================================================
-                 // ===========================================================================================
+                 
                  // append the svg object to the selection
                  var wSvg = width + margin.left + margin.right, hSvg = height + margin.top + margin.bottom;
                  var svg = selection.append('svg')
@@ -187,13 +184,12 @@ var vals = {"Pas besoin":1, "Besoin d'approfondissement":5, "Besoin urgent":10, 
                      .attr('height', hSvg)
                      .append('g')
                      .attr('transform', 'translate(' + wSvg / 2 + ',' + hSvg / 2 + ')');
-                 // ===========================================================================================
+                 
                  // g elements to keep elements within svg modular
                  svg.append('g').attr('class', 'slices');
                  svg.append('g').attr('class', 'labelName');
                  svg.append('g').attr('class', 'lines');
-                 // ===========================================================================================
-                 // ===========================================================================================
+                 
                  // add and colour the donut slices
                  var path = svg.select('.slices')
                      .datum(data).selectAll('path')
@@ -201,46 +197,7 @@ var vals = {"Pas besoin":1, "Besoin d'approfondissement":5, "Besoin urgent":10, 
                      .enter().append('path')
                      .attr('fill', function(d) { return colour(d.data[category]); })
                      .attr('d', arc);
-                 // ===========================================================================================
-                 // ===========================================================================================
-                 /* add text labels
-                 var label = svg.select('.labelName').selectAll('text')
-                     .data(pie)
-                   .enter().append('text')
-                     .attr('dy', '.35em')
-                     .html(function(d) {
-                         // add "key: value" for given category. Number inside tspan is bolded in stylesheet.
-                         return d.data[category] + ': <tspan>' + percentFormat(d.data[variable]) + '</tspan>';
-                     })
-                     .attr('transform', function(d) {
-                         // effectively computes the centre of the slice.
-                         // see https://github.com/d3/d3-shape/blob/master/README.md#arc_centroid
-                         var pos = outerArc.centroid(d);
-                         // changes the point to be on left or right depending on where label is.
-                         pos[0] = radius * 0.95 * (midAngle(d) < Math.PI ? 1 : -1);
-                         return 'translate(' + pos + ')';
-                     })
-                     .style('text-anchor', function(d) {
-                         // if slice centre is on the left, anchor text to start, otherwise anchor to end
-                         return (midAngle(d)) < Math.PI ? 'start' : 'end';
-                     });
-                 */
-                 // ===========================================================================================
-                 /* ===========================================================================================
-                 // add lines connecting labels to slice. A polyline creates straight lines connecting several points
-                 var polyline = svg.select('.lines')
-                     .selectAll('polyline')
-                     .data(pie)
-                   .enter().append('polyline')
-                     .attr('points', function(d) {
-                         // see label transform function for explanations of these three lines.
-                         var pos = outerArc.centroid(d);
-                         pos[0] = radius * 0.95 * (midAngle(d) < Math.PI ? 1 : -1);
-                         return [arc.centroid(d), outerArc.centroid(d), pos]
-                     });
-                 */
-                 // ===========================================================================================
-                 // ===========================================================================================
+                 
                  //ajoute le titre
                  svg.append('text')
                      .html(title)
@@ -257,11 +214,10 @@ var vals = {"Pas besoin":1, "Besoin d'approfondissement":5, "Besoin urgent":10, 
                      .attr("text-anchor", "middle")
                      .attr("id",title)
                      .style('font-size', '15px');
-                 // ==== =======================================================================================
+                 
                  // add tooltip to mouse events on slices and labels
                  d3.selectAll('.labelName text, .slices path').call(toolTip);
-                 // ===========================================================================================
-                 // ===========================================================================================
+                 
                  // Functions
                  // calculates the angle for the middle of a slice
                  function midAngle(d) { return d.startAngle + (d.endAngle - d.startAngle) / 2; }
@@ -270,19 +226,7 @@ var vals = {"Pas besoin":1, "Besoin d'approfondissement":5, "Besoin urgent":10, 
                      // add tooltip (svg circle element) when mouse enters label or slice
                      selection.on('mouseenter', function (data) {
                          $("#graphText").html(data.data.prop+" : "+ data.data.expression);
-                         /*
-                             svg.append('text')
-                             .attr('class', 'toolCircle')
-                             .attr('dy', -15) // hard-coded. can adjust this to adjust text vertical alignment in tooltip
-                             .html(toolTipHTML(data)) // add text to the circle.
-                             .style('font-size', '.9em')
-                             .style('text-anchor', 'middle'); // centres text in tooltip
-                         svg.append('circle')
-                             .attr('class', 'toolCircle')
-                             .attr('r', radius * 0.55) // radius of tooltip circle
-                             .style('fill', colour(data.data[category])) // colour based on category mouse is over
-                             .style('fill-opacity', 0.35);
-                         */
+                        
                      });
                      // remove the tooltip when mouse leaves the slice/label
                      selection.on('mouseout', function (data) {
@@ -294,22 +238,8 @@ var vals = {"Pas besoin":1, "Besoin d'approfondissement":5, "Besoin urgent":10, 
                  function toolTipHTML(data) {
                      var tip = '<h6 class="card-title">'+data.data.prop+'</h6>'
                      tip += '<p class="card-text">'+data.data.expression+'</p>';
-                     /*
-                         var tip = '',
-                         i   = 0;
-                     for (var key in data.data) {
-                         // if value is a number, format it as a percentage
-                         var value = (!isNaN(parseFloat(data.data[key]))) ? percentFormat(data.data[key]) : data.data[key];
-                         // leave off 'dy' attr for first tspan so the 'dy' attr on text element works. The 'dy' attr on
-                         // tspan effectively imitates a line break.
-                         if (i === 0) tip += '<tspan x="0">' + key + ': ' + value + '</tspan>';
-                         else tip += '<tspan x="0" dy="1.2em">' + key + ': ' + value + '</tspan>';
-                         i++;
-                     }
-                     */
                      return tip;
                  }
-                 // ===========================================================================================
              });
          }
          // getter and setter functions. See Mike Bostocks post "Towards Reusable Charts" for a tutorial on how this works.
@@ -367,14 +297,3 @@ var vals = {"Pas besoin":1, "Besoin d'approfondissement":5, "Besoin urgent":10, 
      }
  });
 });
-/*
- <li><strong>Date de naisssance: </strong><span id="dateNaissance"></span></li>
- <li><strong>Adresse: </strong> <span id="adresse"></span></li>
- <li><strong>Nationalité: </strong> <span id="nationalite"></span> </li>
- <li><strong>Téléphone: </strong> <span id="telephone"></span></li>
- <li><strong>N° étudiant : </strong> <span id="numEtudiant"></span></li>
- <li><strong>Compte NetVibes: </strong> <span id="netvibes"></span></li>
- <li><strong>Compte Diigo: </strong> <span id="diigo"></span></li>
- <li><strong>Compte GitHub: </strong> <span id="github"></span></li>
- <li><strong>Spécialité : </strong> <span id="specialite"></span></li>
- <li><strong>Formation précedente: </strong> <span id="formationPreced"></span></li>*/

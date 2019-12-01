@@ -33,11 +33,10 @@
         }).addTo(map);
 
         var select = L.countrySelect({exclude:"French Southern and Antarctic Lands"});
-        //var pays = 
         select.addTo(map);
 
         select.on('change', function(e){
-            if (e.feature === undefined){ //Do nothing on title
+            if (e.feature === undefined){ 
                 return;
             }
             var country = L.geoJson(e.feature);
@@ -58,11 +57,7 @@
         var colorScale = d3.scaleSequential()
             .domain([0, 100])
             .interpolator(d3['interpolatePlasma']);      
-        /*
-            var c = colorScale(20);
-            c = colorScale(0);
-            c = colorScale(100);
-        */      
+        
         //définie le style du pays
         //merci à https://leafletjs.com/examples/choropleth/        
         var nbAlea = d3.randomUniform(0, 100);
